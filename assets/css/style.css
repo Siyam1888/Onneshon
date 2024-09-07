@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 :root{
@@ -7,10 +6,19 @@
     --orange: #FAB60D;
 }
 
+@font-face {
+    font-family: "SolaimanLipi";
+    src: url('../fonts/SolaimanLipi_20-04-07.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
 }
 
 a{
@@ -22,16 +30,13 @@ nav{
     background-color: var(--blue);
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 1em;
     box-shadow: 0.5px 2px 5px gray;
 }
 
 .logo-container{
-    width: 250px;
-  margin-left: -80px;
-  margin-top: -20px;
-  margin-bottom: -35px;
-  margin-right: -70px;
+    width: 64px;
+    margin: 2px 20px 0px 10px;
 }
 
 
@@ -46,8 +51,9 @@ nav{
     display: flex;
   list-style: none;
   color: white;
-  gap: 4vw;
-  margin-right: 5px;
+  gap: 3vw;
+  margin-right: 8px;
+  font-size: .9em;
 }
 
 .nav-list li a{
@@ -60,19 +66,22 @@ nav{
     color: whitesmoke;
 }
 
+
 .hero-title{
-    font-family: "Noto Sans Bengali";
+    font-family: "SolaimanLipi";
     font-size: 24px;
   margin: 20px 6px;
   text-align: center;
+  padding: 0 3px;
 }
 
 .hero-subtitle{
-    font-family: "Noto Sans Bengali";
+    font-family: "SolaimanLipi";
     font-weight: 275;
   font-size: 20px;
   margin: 0px 6px;
   text-align: center;
+  padding: 0 4px;
 }
 
 
@@ -90,10 +99,10 @@ nav{
 }
 
 .course-title{
-    font-size: 32px;
+    font-size: 1.8em;
   font-weight: 600;
   text-align: center;
-  font-family: Inter;
+  font-family: Poppins;
   color: white;
 }
 
@@ -135,17 +144,23 @@ nav{
     color: var(--orange);
 }
 
+
+
+
+
+
 @media only screen and (min-width: 768px) {
     nav{
         justify-content: space-between;
+        padding: 0 6vw;
     }
 
     .logo-container{
-        width: 300px;
+        width: 100px;
     }
     
     .nav-list{
-        margin-right: 2em;
+        margin-right: 1.5em;
         font-size: 2rem;
     }
 
@@ -156,4 +171,114 @@ nav{
     .hero-subtitle{
         font-size: 2em;
     }
+
   }
+
+/* IMPORTED CODE FOR FOOTER DESIGN https://www.codingnepalweb.com/create-responsive-footer-html-css-only/*/
+
+.footer {
+    background: var(--blue);
+  }
+  .footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+    padding: 60px;
+  }
+  .footer-row .footer-col h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .footer-col .links {
+    margin-top: 20px;
+  }
+  .footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  .footer-col .links li a {
+    text-decoration: none;
+    color: #bfbfbf;
+  }
+  .footer-col .links li a:hover {
+    color: #fff;
+  }
+  .footer-col p {
+    margin: 20px 0;
+    color: #bfbfbf;
+    max-width: 300px;
+  }
+  .footer-col form {
+    display: flex;
+    gap: 5px;
+  }
+  .footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6 ;
+    caret-color: #fff;
+    color: #fff;
+    padding-left: 10px;
+  }
+  .footer-col input::placeholder {
+    color: #ccc;
+  }
+   .footer-col form button {
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+  .footer-col form button:hover {
+    background: #cecccc;
+  }
+  .footer-col .icons {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      cursor: pointer;
+      margin-right: 20px;
+      font-size: 24px;
+  }
+  .footer-col .icons i {
+    color: #afb6c7;
+  }
+  .footer-col .icons i:hover  {
+    color: #fff;
+  }
+  
+
+
+
+@media (max-width: 768px) {
+    .footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+      }
+      .footer .footer-row {
+        padding: 20px;
+        gap: 1rem;
+      }
+      .footer-col form {
+        display: block;
+      }
+      .footer-col form :where(input, button) {
+        width: 100%;
+      }
+      .footer-col form button {
+        margin: 10px 0 0 0;
+      }
+}
